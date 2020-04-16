@@ -15,13 +15,6 @@ public class TaskA1 {
     private List<Integer> grades = new ArrayList<>();
 
 
-    public List<Integer> rand(List<Integer> array, int size){
-        for (int i = 0; i < size; i++) {
-            array.add((int) (1 + Math.random() * 5));
-        }
-        return array;
-    }
-
     public void clearBad(List<Integer> grades){
         Iterator<Integer> iterator = grades.iterator();
         while(iterator.hasNext()) {
@@ -33,7 +26,8 @@ public class TaskA1 {
 
     public static void main(String[] args) {
         TaskA1 a1 = new TaskA1();
-        a1.rand(a1.getGrades(), 20);
+        Randomizing randomizing = new Randomizing();
+        randomizing.rand(a1.getGrades(), 20, 100);
         System.out.println(a1.getGrades());
 
         a1.clearBad(a1.getGrades());
