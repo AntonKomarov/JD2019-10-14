@@ -17,7 +17,7 @@ public class TaskA2 {
         prnt(getCross(hashSet, treeSet));
         prnt(getUnion(hashSet, treeSet));
     }
-    
+
     public static void prnt(Set<Integer> set){
         System.out.println(set);
     }
